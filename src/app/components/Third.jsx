@@ -112,7 +112,7 @@ const Third = ({ data, handleChange, onSubmit, onBack }) => {
                   <p className="text-[#E14942] text-sm">{error.date}</p>
                 </div>
                 <div className="flex w-full">
-                  <h3 className="font-semibold text-sm text-[#334155]">
+                  <h3 className="font-semibold text-sm text-[#334155] my-2">
                     Profile image
                   </h3>
                   {error.img && (
