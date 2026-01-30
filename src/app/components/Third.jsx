@@ -139,7 +139,7 @@ const Third = ({ data, handleChange, onSubmit, onBack }) => {
                     <img
                       src={img}
                       alt="previewImg"
-                      className="absolute w-104 h-45 rounded-lg object-cover bg-cover"
+                      className="absolute w-104 h-45 rounded-lg bg-auto"
                     />
                   )}
                   {img && (
