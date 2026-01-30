@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "./Button";
 import { Input } from "./Input";
-import { differenceInYears } from "date-fns";
+import { differenceInYears, set } from "date-fns";
 import { motion } from "framer-motion";
 
 const Third = ({ data, handleChange, onSubmit, onBack }) => {
@@ -66,7 +66,11 @@ const Third = ({ data, handleChange, onSubmit, onBack }) => {
       return url;
     });
   };
+  const deleteImg = () => {
+    console.log("delete button daragdaj bn");
 
+    setImg(null);
+  };
   return (
     <motion.div
       initial={{ x: 80, opacity: 0 }}
@@ -138,6 +142,14 @@ const Third = ({ data, handleChange, onSubmit, onBack }) => {
                       alt="previewImg"
                       className="absolute w-104 h-45 rounded-lg object-cover bg-cover"
                     />
+                  )}
+                  {img && (
+                    <button
+                      className="absolute top-28 right-3 bg-[#202124] size-6 rounded-full flex justify-center items-center"
+                      onClick={deleteImg}
+                    >
+                      <img src="./x.png" className="size-1.75" />
+                    </button>
                   )}
                 </div>
                 <p className="text-[#E14942] text-sm">{error.img}</p>
