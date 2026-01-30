@@ -133,7 +133,6 @@ const Third = ({ data, handleChange, onSubmit, onBack }) => {
                     accept="image/*"
                     onClick={handleChange}
                     onChange={image}
-                    value={data.img}
                     className={`absolute w-104 h-45 rounded-lg text-transparent border ${error.img ? " border-[#E14942]" : "text-[#121316]"}`}
                   />
                   {img && (
@@ -145,7 +144,7 @@ const Third = ({ data, handleChange, onSubmit, onBack }) => {
                   )}
                   {img && (
                     <button
-                      className="absolute top-28 right-3 bg-[#202124] size-6 rounded-full flex justify-center items-center"
+                      className="relative bottom-25 left-45 bg-[#202124] size-6 rounded-full flex justify-center items-center"
                       onClick={deleteImg}
                     >
                       <img src="./x.png" className="size-1.75" />
